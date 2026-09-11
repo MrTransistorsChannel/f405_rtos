@@ -98,7 +98,7 @@ bool startTask(Task_t *task) {
     if (!task)
         return false;
     // Check if specified priority is valid
-    if (task->staticPriority > TASK_PRIORITY_LVL_NUM)
+    if (task->staticPriority >= TASK_PRIORITY_LVL_NUM)
         return false;
     // Set task's state to ready
     task->state = TASK_STATE_READY;
