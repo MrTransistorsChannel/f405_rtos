@@ -40,7 +40,7 @@ typedef struct task_s {
     struct task_s *prev;
     struct task_s *next;
 
-    const void (*taskFunc)(timeUs_t execTimeUs);
+    void (* const taskFunc)(timeUs_t execTimeUs);
 
     timeDelta_t periodUs;
     timeUs_t lastExecTimeUs;
